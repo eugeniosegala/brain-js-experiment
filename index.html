@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ML Accessibility experiment</title>
+
+  <script src="//unpkg.com/brain.js" defer></script>
+  <script src="script.js" defer></script>
+
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+
+    #color {
+      width: 100%;
+      height: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 0 0 25px 0;
+    }
+
+    #menu {
+      text-align: center;
+    }
+
+    #guess {
+      font-size: 40px;
+    }
+
+    .white {
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="color">
+    <div id="guess">This is decided by the AI</div>
+  </div>
+
+  <div id="menu">
+    <button id="white-button">White</button>
+    <button id="black-button">Black</button>
+    <button onclick="setRandomColor()">Random Colour</button>
+    <button id="print-button">Print Model</button>
+
+    <div id="neural-network"></div>
+  </div>
+</body>
+</html>
